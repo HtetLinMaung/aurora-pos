@@ -1,0 +1,277 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "OpenAPI 3.0",
+    "description": "",
+    "version": "1.0.11"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "tags": [
+    {
+      "name": "routes",
+      "description": "Everything about your Routes"
+    }
+  ],
+  "paths": {
+    "/api/login": {
+      "get": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "getapi_login"
+      },
+      "post": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "postapi_login"
+      },
+      "put": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "putapi_login"
+      },
+      "patch": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "patchapi_login"
+      },
+      "delete": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "deleteapi_login"
+      }
+    },
+    "/api/products/:_id": {
+      "get": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "getapi_products_:_id"
+      },
+      "post": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "postapi_products_:_id"
+      },
+      "put": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "putapi_products_:_id"
+      },
+      "patch": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "patchapi_products_:_id"
+      },
+      "delete": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "deleteapi_products_:_id"
+      }
+    },
+    "/api/products": {
+      "get": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "getapi_products"
+      },
+      "post": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "postapi_products"
+      },
+      "put": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "putapi_products"
+      },
+      "patch": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "patchapi_products"
+      },
+      "delete": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "deleteapi_products"
+      }
+    },
+    "/api/users/:_id": {
+      "get": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "getapi_users_:_id"
+      },
+      "post": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "postapi_users_:_id"
+      },
+      "put": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "putapi_users_:_id"
+      },
+      "patch": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "patchapi_users_:_id"
+      },
+      "delete": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "deleteapi_users_:_id"
+      }
+    },
+    "/api/users": {
+      "get": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "getapi_users"
+      },
+      "post": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "postapi_users"
+      },
+      "put": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "putapi_users"
+      },
+      "patch": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "patchapi_users"
+      },
+      "delete": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "deleteapi_users"
+      }
+    },
+    "/express": {
+      "get": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "getexpress"
+      },
+      "post": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "postexpress"
+      },
+      "put": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "putexpress"
+      },
+      "patch": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "patchexpress"
+      },
+      "delete": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "deleteexpress"
+      }
+    },
+    "/function": {
+      "get": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "getfunction"
+      },
+      "post": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "postfunction"
+      },
+      "put": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "putfunction"
+      },
+      "patch": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "patchfunction"
+      },
+      "delete": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "deletefunction"
+      }
+    },
+    "/lambda": {
+      "get": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "getlambda"
+      },
+      "post": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "postlambda"
+      },
+      "put": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "putlambda"
+      },
+      "patch": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "patchlambda"
+      },
+      "delete": {
+        "tags": [
+          "routes"
+        ],
+        "operationId": "deletelambda"
+      }
+    }
+  }
+}
