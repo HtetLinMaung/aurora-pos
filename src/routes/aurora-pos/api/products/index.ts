@@ -1,14 +1,13 @@
 import {
   brewExpressFuncCreateOrFindAll,
-  brewExpressFuncFindAll,
   throwErrorResponse,
 } from "code-alchemy";
-import UserModel from "../../../models/User";
-import isAdmin from "../../../utils/is-admin";
-import isAuth from "../../../utils/is-auth";
+import Product from "../../../../models/Product";
+import isAdmin from "../../../../utils/is-admin";
+import isAuth from "../../../../utils/is-auth";
 
 export default brewExpressFuncCreateOrFindAll(
-  UserModel,
+  Product,
   {
     afterFunctionStart: async (req) => {
       isAuth(req);

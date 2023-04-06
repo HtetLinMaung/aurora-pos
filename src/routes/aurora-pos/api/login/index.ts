@@ -1,7 +1,7 @@
 import { brewBlankExpressFunc, throwErrorResponse } from "code-alchemy";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
-import User from "../../../models/User";
+import User from "../../../../models/User";
 
 export default brewBlankExpressFunc(async (req, res) => {
   // Get username and password from request body

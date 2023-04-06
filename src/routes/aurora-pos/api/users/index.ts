@@ -1,15 +1,16 @@
 import {
-  brewExpressFuncFindOneOrUpdateOrDeleteByParam,
+  brewExpressFuncCreateOrFindAll,
+  brewExpressFuncFindAll,
   throwErrorResponse,
 } from "code-alchemy";
-import Product from "../../../../models/Product";
+import UserModel from "../../../../models/User";
 import isAdmin from "../../../../utils/is-admin";
 import isAuth from "../../../../utils/is-auth";
 
-export default brewExpressFuncFindOneOrUpdateOrDeleteByParam(
-  Product,
+export default brewExpressFuncCreateOrFindAll(
+  UserModel,
   {
-    afterFunctionStart: async (req, res) => {
+    afterFunctionStart: async (req) => {
       isAuth(req);
       const ok = await isAdmin(req.body.createdBy);
       if (!ok) {
@@ -17,7 +18,5 @@ export default brewExpressFuncFindOneOrUpdateOrDeleteByParam(
       }
     },
   },
-  "Product not found!",
-  "_id",
   "mongoose"
 );

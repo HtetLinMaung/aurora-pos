@@ -2,12 +2,12 @@ import {
   brewExpressFuncFindOneOrUpdateOrDeleteByParam,
   throwErrorResponse,
 } from "code-alchemy";
-import UserModel from "../../../../models/User";
-import isAdmin from "../../../../utils/is-admin";
-import isAuth from "../../../../utils/is-auth";
+import Product from "../../../../../models/Product";
+import isAdmin from "../../../../../utils/is-admin";
+import isAuth from "../../../../../utils/is-auth";
 
 export default brewExpressFuncFindOneOrUpdateOrDeleteByParam(
-  UserModel,
+  Product,
   {
     afterFunctionStart: async (req, res) => {
       isAuth(req);
@@ -17,7 +17,7 @@ export default brewExpressFuncFindOneOrUpdateOrDeleteByParam(
       }
     },
   },
-  "User not found!",
+  "Product not found!",
   "_id",
   "mongoose"
 );
