@@ -5,7 +5,7 @@ import User from "../../../models/User";
 
 export default brewBlankExpressFunc(async (req, res) => {
   // Get username and password from request body
-  const { username, password } = req.body;
+  const { username, password, rememberMe } = req.body;
 
   // Check if user with given username exists in database
   const user = await User.findOne({ username });
@@ -19,6 +19,9 @@ export default brewBlankExpressFunc(async (req, res) => {
     throwErrorResponse(401, "Invalid password!");
   }
 
+  // Set the JWT expiration time based on the rememberMe parameter
+  const expiresIn = rememberMe ? "7d" : process.env.JWT_EXPIRES_IN;
+
   // Create and sign JWT token
   const token = jwt.sign(
     {
@@ -26,7 +29,7 @@ export default brewBlankExpressFunc(async (req, res) => {
     },
     process.env.JWT_SECRET_KEY,
     {
-      expiresIn: process.env.JWT_EXPIRES_IN,
+      expiresIn,
     }
   );
 
